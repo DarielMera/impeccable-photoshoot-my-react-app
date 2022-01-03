@@ -1,0 +1,17 @@
+.suggestions-List-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: auto;
+    width: auto;
+    padding: 40px 300px 40px;
+    overflow-y: scroll;
+    border:  rgb(141, 128, 128) solid 3px ;
+    border-radius: 7px;
+    background-color: white;
+  }
+
+  ol > li:nth-child(odd) {
+    background-color: rgb(153, 153, 153, .2);
+  }
+
