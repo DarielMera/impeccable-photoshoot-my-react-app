@@ -21,6 +21,21 @@
   }
 
   .organizations-logos{
+    width: 15%;
+    display: flex;
     justify-content: space-around;
+    flex-direction: row;
+    align-items: center;
+    
 
+  }
+
+  @media only screen and (max-width: 720px) {
+    .footer-container {
+      flex-direction: column;
+    }
+    .organizations-logos{
+      width: 22%;
+    }
+  
   }

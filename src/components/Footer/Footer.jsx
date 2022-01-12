@@ -9,7 +9,7 @@ export default function Footer(){
 
     return (
         <footer className="footer-container">
-        <p><span>Copyright</span><img src={copyright} alt="copyright logo" width="10px" height="10px" />2021 Dariel Mera  - Boca Code Official Project</p>
+        <p>Copyright<img src={copyright} alt="copyright logo" width="10px" height="10px" />2021 Dariel Mera</p>
          <div className="organizations-logos"> 
           <a href="https://www.linkedin.com/in/dariel-mera-b6454057/" >
             <img src={linkedin} alt="linkedin logo" width="22px" height="22px" />

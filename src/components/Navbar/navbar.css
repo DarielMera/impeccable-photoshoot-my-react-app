@@ -1,0 +1,28 @@
+        .main-nav {
+            color: white;
+            font-size: 1.2em;
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            flex-direction: row;
+            height: 70px;
+            padding: 20px;
+            background-color:black;
+          }
+  
+
+          .main-nav :link {
+              color: white;
+          }
+          .main-nav :link:visited {
+              color: white;
+          }
+          .main-nav :link:hover {
+              border-top: 2px dotted white;
+              border-bottom: 2px dotted pink;
+            }
+            .main-nav :link:active {
+                color: white;
+            }
+  
+  
