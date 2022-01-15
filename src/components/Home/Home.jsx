@@ -24,6 +24,7 @@ function HeaderHome(){
             <div className="signin">Signin</div>
           </div>
       </div>
+      <p className='appPurpose'>The wedding photographer best friend - allowing your clients to customize their photoshoot portraits</p>
       </header>
 
       <main className="main">
@@ -38,7 +39,7 @@ function HeaderHome(){
           
 
           <ul> 
-            <li>Control your Frames</li><br/>            
+            <li>Create your Frames</li><br/>            
             <li>Position your Guests</li><br/>
             <li>Pre-Define Who Stands Next to you</li><br/>
             <li>Identify Who is not Present</li><br/>

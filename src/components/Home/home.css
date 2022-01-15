@@ -1,3 +1,13 @@
+body{
+  background-image: url("/Users/darielmera/Code/IP-api/ip-react/ip-shoot-react/src/svg/Weddings-59.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  height: 100vh;
+  width: 100vw;
+}
+
+
+
 .container {
     display: grid;
     grid-template-columns: 100%;
@@ -6,6 +16,7 @@
         "header"
         "main";
 }
+
 
 .header {
     grid-area: header;
@@ -103,14 +114,26 @@ ul {
     font-size: .7em;
 }
 
+.appPurpose {
+    background-color: #dda0dd;
+    padding:4px;
+    text-align: center;
+    font-family: 'Space Mono', monospace;
+    font-size: .8em;
+    margin-bottom: 14px;
+}
 
-ul>li:nth-child(odd) {
-    /* background-color: rgba(189, 182, 182, 0.1); */
+ul>li {
+    background-color: rgba(189, 182, 182, 0.1);
     padding: 45px;
     border-radius: 8px;
     box-shadow: black 2px 2px 2px 1px;
 }
-
+ul>li:hover {
+    background-color: #f5efefcf;
+    box-shadow: #dda0dd 2px 2px 2px 1px;
+    
+}
 .center-elements {
     display: flex;
     flex-direction: row;

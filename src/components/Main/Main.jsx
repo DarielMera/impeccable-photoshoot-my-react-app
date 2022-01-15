@@ -13,7 +13,6 @@ export default function Main(){
         <Route path="suggestionslist"  element={<SuggestionList/>} />
         <Route path="avatarcreator"    element={<AvatarCreator/>} />
         <Route path="framecreator"     element={<FrameCreator/>} />
-        <Route path="suggestionslist"  element={<SuggestionList/>} />
         <Route path="photographerview"  element={<PhotographerView/>} />
         </Routes>
     )
