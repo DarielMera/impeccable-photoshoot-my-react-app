@@ -1,0 +1,65 @@
+
+/* -----GRID-LAYOUT------- */
+#formcontainer{
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr 1fr;
+    grid-auto-rows: auto;
+
+    gap: 20px;
+    padding: 30px;
+    padding-bottom: 100px;
+
+
+    grid-template-areas:
+      ". bride groom ."
+      ". female male ."
+      ". boy girl . ";
+}
+
+#brideForm{
+    grid-area:bride;
+}
+
+#groomForm{
+    grid-area:groom;
+}
+
+#femaleForm{
+    grid-area:female;
+}
+
+#maleForm{
+    grid-area:male;
+}
+
+#girlForm{
+    grid-area:girl;
+}
+
+#boyForm{
+    grid-area:boy;
+    }
+
+.form-styles {
+    padding: 10px;
+    border: .5px solid black;
+    border-radius: 7px;
+    background-color: rgb(248, 245, 245);
+}
+
+
+      /* -------------------------RESPONSIVE------------------------------------ */
+    @media only screen and (max-width: 850px) {
+        #formcontainer {
+          grid-template-columns: 1fr;
+          grid-template-areas:
+            "bride"
+            "groom"
+            "female"
+            "male"
+            "girl"
+            "boy";
+        }
+      }
+
+

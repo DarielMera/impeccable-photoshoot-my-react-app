@@ -6,7 +6,6 @@
   grid-template-areas:
     "header header header header"
     "navbar navbar navbar navbar"
-    "title title title title"
     "main main main main"
     "footer footer footer footer";
 }
@@ -17,10 +16,6 @@
 
 .navbar{
   grid-area: navbar;
-}
-
-.title {
-  grid-area: title;
 }
 
 .main {

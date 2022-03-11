@@ -7,7 +7,6 @@ export default function Navbar(){
 
     return(
     <nav className="main-nav">
-          <Link to="home">             Home                 </Link>
           <Link to="suggestionsList">  Shot Suggestion List </Link>
           <Link to="avatarCreator">    Avatar Creator       </Link>
           <Link to="frameCreator">     Frame Creator        </Link>

@@ -5,6 +5,8 @@
     height: auto;
     width: auto;
     padding: 40px 300px 40px;
+    padding-bottom: 100px;
+
     overflow-y: scroll;
     border:  rgb(141, 128, 128) solid 3px ;
     border-radius: 7px;
