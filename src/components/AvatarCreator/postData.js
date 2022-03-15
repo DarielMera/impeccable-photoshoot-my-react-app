@@ -12,7 +12,7 @@ console.log(dataToPost)
 
     if(!dataToPost) return
 
-    fetch("https://feipshoot.uk.r.appspot.com/ava", postAvatarData)
+    fetch("https://feipshoot.uk.r.appspot.com/avatars", postAvatarData)
       .then(response => response.json())
       .then(result => console.log(result))
       .catch(error => console.log('error', error));
