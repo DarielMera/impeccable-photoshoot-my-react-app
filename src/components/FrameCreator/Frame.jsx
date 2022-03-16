@@ -26,11 +26,6 @@ function Frame() {
 
 
 }
-// this is the code i need to get the ids of the current elements and then push them to an array 
-// and then post to database (on its won endpoing),, in the photographer view i would fetch the 
-// array list and load the avatars compared to the data ...so i need to pass the data as prop to the 
-//phototgrapher view.
-
 
 	return (
 		<div className="frame-container">

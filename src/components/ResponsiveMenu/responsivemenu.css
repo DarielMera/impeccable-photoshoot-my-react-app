@@ -35,10 +35,14 @@
         display: block;
       }
       
-      .dropdown-content :link {color: white} 
-      .dropdown-content :link:visited {color: white} 
-      .dropdown-content :link:hover {background-color: #f1f1f1}
-      .dropdown-content :link:active {color: white} 
+      .dropdown-content .linkColor{
+        color: rgb(0, 0, 0);
+      }
+      .dropdown-content .linkColor:hover{
+        background-color: rgba(0, 0, 0, 0.3);
+      
+    }
+
       
       .dropdown:hover .dropdown-content {
         display: block;
