@@ -5,6 +5,7 @@ import Home from './components/Home/Home';
 import App from './App';
 import './index.css';
 
+
 // Create Context
 // Provide this useReducer Function as the state provided
 //useReducer will toggle between false / true
@@ -16,11 +17,13 @@ import './index.css';
 // }
  
 
+
+
 ReactDOM.render(
   <BrowserRouter>
    {/* {true ? <Home /> : <App />} */}
    <App />
-  </BrowserRouter>,
+</BrowserRouter>,
   document.getElementById('root')
 );
 

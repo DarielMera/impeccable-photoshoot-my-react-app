@@ -6,7 +6,7 @@ function SelectedImage({ kind }) {
 	const [image, setImage] = useState("")
 
 	useEffect(() => setImage(() => (kind === "Bride" ? brideAvatar : groomAvatar)), [kind])
-	return <img src={image} alt={`${kind} avatar`} />
+	return <img src={image} alt={`${kind}`} />
 }
 
 function SideBarLeft({ data }) {

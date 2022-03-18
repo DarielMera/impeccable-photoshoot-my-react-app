@@ -26,7 +26,6 @@ function Frame() {
 
 
 }
-
 	return (
 		<div className="frame-container">
 			<div id="frame" 

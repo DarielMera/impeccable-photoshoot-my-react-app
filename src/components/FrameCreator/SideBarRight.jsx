@@ -29,7 +29,7 @@ function SelectedImage({ kind }) {
 	const [image, setImage] = useState("")
 
 	useEffect(() => setImage(changeImage(kind)), [kind])
-	return <img src={image} alt={`${kind} avatar`} />
+	return <img src={image} alt={`${kind}`} />
 }
 
 function SideBarRight({ data }) {

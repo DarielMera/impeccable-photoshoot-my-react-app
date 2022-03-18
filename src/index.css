@@ -13,20 +13,8 @@ body {
   background-attachment: fixed;
   height: 100vh;
   width: 100vw; */
+}
   
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
-
-
 @media only screen and (max-width: 768px) {
   .main-nav{
   display: none;
@@ -40,6 +28,6 @@ code {
 body { 
   background-position-x: 27%;
 }
-}
 
+}
 

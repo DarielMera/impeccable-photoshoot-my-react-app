@@ -13,7 +13,7 @@ export default function FrameCreator() {
 		<>
 			<Title
 				title="Frame Creator"
-				instructions={`It's time to compose your shots, drag and drop the avatars by their name, press the smile button to save`}  
+				instructions={`It's time to compose your shots, drag and drop your guests by their name, press the smile button to save, go to Photographer View`}  
 			/>
 		
             <div id="frame-container-layout">

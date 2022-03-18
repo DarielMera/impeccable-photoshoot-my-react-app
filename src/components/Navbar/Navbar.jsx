@@ -1,13 +1,5 @@
 import {Link} from "react-router-dom"
-
-
 import './navbar.css'
-
-const linkStyle = {
-    textDecoration: "none",
-    color: 'white'
-  };
-
 
 export default function Navbar(){
 
