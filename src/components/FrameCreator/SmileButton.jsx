@@ -20,6 +20,9 @@ const frameComposition = () => {
 		}
 		frame.push(avatar)
 	}
+	
+	// postData happens here -- pass in frame as the array of objecg to be post it to db
+	
 	console.log(frame)
 	localStorage.setItem("frame", JSON.stringify(frame))
 }

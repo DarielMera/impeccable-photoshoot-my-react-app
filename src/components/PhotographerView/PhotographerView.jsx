@@ -15,6 +15,8 @@ import maleAvatar from "../AvatarCreator/images/male.png"
 import girlAvatar from "../AvatarCreator/images/girl.svg"
 import boyAvatar from "../AvatarCreator/images/boy.svg"
 
+import './photographerview.css'
+
 function changeImage(kind) {
 	let image
 	switch (kind) {
@@ -63,29 +65,32 @@ export default function PhotographerView(props) {
 		//  avatarData = useFetch('https://feipshoot.uk.r.appspot.com/avatars')
 		//  frameData = useFetch('https://feipshoot.uk.r.appspot.com/frames')
 
+frameData.forEach(()=>(       
 
-
-		const avatars = avatarData.map(
+		const avatars = frameData.map(
+		// const incomingDataFromLocalStorage = JSON.parse(localStorage.getItem('frame'))	
+		// const avatars = incomingDataFromLocalStorage.map(
 			(avatar, i) => (
 				<>
-					<PhotographerFrame key={i}> 
+					<PhotographerFrame key={i} > 
 					<div
-						className="avatar-presentation"
+						className="avatar-presentation-photographer-view "
 						>
 
 						<SelectedImage kind={avatar.kind} />
-						<div className="info-style">
+						<div className="info-style-photographer-view ">
 							<span>{avatar.name} </span>
 							<span>{avatar.relationship}</span>
 							<span>{avatar.role}</span>
 						</div>
 					</div>
-					<h1>hello</h1>
 					</PhotographerFrame> 
 				<IsPicTaken />
 				</>
 				)
 		)
+
+		))
 	
 	return (
 		<>
