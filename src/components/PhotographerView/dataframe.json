@@ -1,74 +1,74 @@
 [{
-        "_id": "623159e594604be1e8c6b114",
-        "frameid": [{
+    "_id": "623159e594604be1e8c6b114",
+    "frameid": [{
+        "kind": "Bride",
+        "name": "Maria Diaz"
+    }],
+    "guestInfo": null
+},
+{
+    "_id": "62315a0c94604be1e8c6b115",
+    "frameid": [{
             "kind": "Bride",
             "name": "Maria Diaz"
-        }],
-        "guestInfo": null
-    },
-    {
-        "_id": "62315a0c94604be1e8c6b115",
-        "frameid": [{
-                "kind": "Bride",
-                "name": "Maria Diaz"
-            },
-            {
-                "kind": "Groom",
-                "name": "Mario Fernandez"
-            }
-        ],
-        "guestInfo": null
-    },
-    {
-        "_id": "62315a5d94604be1e8c6b116",
-        "frameid": [{
-            "Kind": "Female",
-            "name": "Ana Juaquina ",
-            "relationship": "grandmother",
-            "role": "maid of honor"
-        }, {
-            "kind": "Bride",
-            "name": "Maria Diaz"
-        }, {
+        },
+        {
             "kind": "Groom",
             "name": "Mario Fernandez"
-        }, {
-            "Kind": "Male",
-            "name": "Antonio Guzman ",
-            "relationship": "uncle",
-            "role": "best man"
-        }],
-        "guestInfo": null
-    },
-    {
-        "_id": "62315a6594604be1e8c6b117",
-        "frameid": [{
-            "Kind": "Male",
-            "name": "Antonio Guzman ",
-            "relationship": "uncle",
-            "role": "best man"
-        }, {
-            "Kind": "Girl",
-            "name": "Rosita ",
-            "relationship": "step daughter",
-            "role": "flower girl"
-        }, {
-            "kind": "Bride",
-            "name": "Maria Diaz"
-        }, {
-            "kind": "Groom",
-            "name": "Mario Fernandez"
-        }, {
-            "Kind": "Boy",
-            "name": "Narciso",
-            "relationship": "son",
-            "role": "ring bearer"
-        }, {
-            "Kind": "Female",
-            "name": "Ana Juaquina ",
-            "relationship": "grandmother",
-            "role": "maid of honor"
-        }],
-        "guestInfo": null
-    }
+        }
+    ],
+    "guestInfo": null
+},
+{
+    "_id": "62315a5d94604be1e8c6b116",
+    "frameid": [{
+        "kind": "Female",
+        "name": "Ana Juaquina ",
+        "relationship": "grandmother",
+        "role": "maid of honor"
+    }, {
+        "kind": "Bride",
+        "name": "Maria Diaz"
+    }, {
+        "kind": "Groom",
+        "name": "Mario Fernandez"
+    }, {
+        "kind": "Male",
+        "name": "Antonio Guzman ",
+        "relationship": "uncle",
+        "role": "best man"
+    }],
+    "guestInfo": null
+},
+{
+    "_id": "62315a6594604be1e8c6b117",
+    "frameid": [{
+        "kind": "Male",
+        "name": "Antonio Guzman ",
+        "relationship": "uncle",
+        "role": "best man"
+    }, {
+        "kind": "Girl",
+        "name": "Rosita ",
+        "relationship": "step daughter",
+        "role": "flower girl"
+    }, {
+        "kind": "Bride",
+        "name": "Maria Diaz"
+    }, {
+        "kind": "Groom",
+        "name": "Mario Fernandez"
+    }, {
+        "kind": "Boy",
+        "name": "Narciso",
+        "relationship": "son",
+        "role": "ring bearer"
+    }, {
+        "kind": "Female",
+        "name": "Ana Juaquina ",
+        "relationship": "grandmother",
+        "role": "maid of honor"
+    }],
+    "guestInfo": null
+}
 ]

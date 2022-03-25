@@ -51,55 +51,54 @@ function SelectedImage({ kind }) {
 	return <img src={image} alt={`${kind} avatar`} />
 }
 
-
-
-
-
-
-
-
+   
 
 export default function PhotographerView(props) {
-
-
-		//  avatarData = useFetch('https://feipshoot.uk.r.appspot.com/avatars')
 		//  frameData = useFetch('https://feipshoot.uk.r.appspot.com/frames')
-
-frameData.forEach(()=>(       
-
-		const avatars = frameData.map(
-		// const incomingDataFromLocalStorage = JSON.parse(localStorage.getItem('frame'))	
-		// const avatars = incomingDataFromLocalStorage.map(
-			(avatar, i) => (
-				<>
-					<PhotographerFrame key={i} > 
-					<div
-						className="avatar-presentation-photographer-view "
-						>
-
-						<SelectedImage kind={avatar.kind} />
-						<div className="info-style-photographer-view ">
+		
+		// .map( callback function)
+		function getEachElementInsideFrameId(avatar, i){
+			return( 	
+				<> 
+				   <div  className='childrens-of-frame' > 			
+				<SelectedImage kind={avatar.kind} /> 
+					<div  key={i} className="avatar-presentation-photographer-view">
+					
+						<div key={avatar._id} className="info-style-photographer-view ">
+							<span>{avatar.kind}</span> 
 							<span>{avatar.name} </span>
 							<span>{avatar.relationship}</span>
 							<span>{avatar.role}</span>
 						</div>
 					</div>
-					</PhotographerFrame> 
-				<IsPicTaken />
-				</>
-				)
-		)
+					</div>
+					</>
+			   )
+		}
+			
+		
+					function iterateforEachDocumentInDataFrame(item, index, array) {	
+												
+						let avatarsInFrame = item.frameid.map(getEachElementInsideFrameId)
+						console.log(avatarsInFrame);
+						return (
+							<> 
+						<PhotographerFrame key={array._id} frameNumber={index + 1}> {avatarsInFrame} </PhotographerFrame>
+						<IsPicTaken />
+						</>
 
-		))
-	
-	return (
-		<>
-			<Title
-				title="Photographer View"
-				instructions="This is a preview list of the shots the photographer will take"
-			/>
+						)
+						
+						
+					}	
+				
+				let	newArrayToBeDisplayed =	frameData.map(iterateforEachDocumentInDataFrame)
+		
+		return (
+			<>
+			<Title title="Photographer View" instructions="This is a preview list of the shots the photographer will take"/>
+			{newArrayToBeDisplayed}
 
-			{avatars}
 		</>
 	)
 }
