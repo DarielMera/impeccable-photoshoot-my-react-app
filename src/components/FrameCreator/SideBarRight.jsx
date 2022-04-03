@@ -1,4 +1,6 @@
 import { useEffect, useState } from "react"
+import useFetch from "../customHooks/useFetch"
+
 import femaleAvatar from "../AvatarCreator/images/female.svg"
 import maleAvatar from "../AvatarCreator/images/male.png"
 import girlAvatar from "../AvatarCreator/images/girl.svg"
@@ -7,16 +9,16 @@ import boyAvatar from "../AvatarCreator/images/boy.svg"
 function changeImage(kind) {
 	let image
 	switch (kind) {
-		case "Female":
+		case "female":
 			image = femaleAvatar
 			break
-		case "Male":
+		case "male":
 			image = maleAvatar
 			break
-		case "Girl":
+		case "girl":
 			image = girlAvatar
 			break
-		case "Boy":
+		case "boy":
 			image = boyAvatar
 			break
 		default:
@@ -33,6 +35,7 @@ function SelectedImage({ kind }) {
 }
 
 function SideBarRight({ data }) {
+
 	const dragStart = e => {
 		const target = e.target
 
@@ -51,16 +54,14 @@ function SideBarRight({ data }) {
 	const drop = e => {
 		e.preventDefault()
 		const avatar_id = e.dataTransfer.getData("avatar_id")
-
 		const avatar = document.getElementById(avatar_id)
 		avatar.style.display = "block"
-
 		e.target.appendChild(avatar)
 	}
 
 	const avatars = data.map(
-		(avatar, i) =>
-			!(avatar.kind === "Bride" || avatar.kind === "Groom") && (
+		(avatar, i) => (   
+			!(avatar.kind === "bride" || avatar.kind === "groom") && (
 				<div
 					id={avatar._id}
 					className="avatar-presentation"
@@ -76,6 +77,7 @@ function SideBarRight({ data }) {
 					</div>
 				</div>
 			)
+		)	
 	)
 
 	return (

@@ -4,7 +4,7 @@ import femalePic from './images/female.svg'
 
 function FemaleForm() {
   const [inputs, setInputs] = useState({
-    avatarType: "female",
+    kind: "female",
     name: "",
     relationship: "",
     role: ""

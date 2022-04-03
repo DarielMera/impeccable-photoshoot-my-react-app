@@ -9,7 +9,7 @@ const frameComposition = () => {
 		let avatar = {}
 		let kindOfAvatar = framers.childNodes[i].childNodes[0].alt
 
-		if (kindOfAvatar === "Bride" || kindOfAvatar === "Groom") {
+		if (kindOfAvatar === "bride" || kindOfAvatar === "groom") {
 			avatar.kind = framers.childNodes[i].childNodes[1].childNodes[0].innerHTML
 			avatar.name = framers.childNodes[i].childNodes[1].childNodes[1].innerHTML
 		} else {
@@ -73,9 +73,7 @@ export default function SmileButton() {
 	return (
 		<button
 			className="smileButton"
-			// onClick={refreshAll}
 			onClick={Shutter}>
-			{/* onClick={frameComposition}> */}
 			Smile
 		</button>
 	)

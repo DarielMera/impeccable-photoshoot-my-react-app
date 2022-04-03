@@ -12,7 +12,7 @@ export default function AvatarCreator() {
 		<>
 			<Title 
 			title="Avatar Creator"
-			instructions="Who are the priviledge ones to be in your portraits !!"
+			instructions="Who are the priviledge ones to be in your portraits ?"
 			/>
 			
 			<div id="formcontainer">

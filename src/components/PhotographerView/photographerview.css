@@ -5,7 +5,7 @@
     background-attachment: fixed;
   } */
 
-  #frame-photographer-view {
+  .frame-photographer-view {
     display: flex;
     flex-direction:column;
     align-items:center;
@@ -21,17 +21,17 @@
     border-radius: 3px 3px 0px 0px;
     background-color: white;
     overflow-x: scroll;
-    margin: 25px;
+    margin: 35px;
   }
 
-  .childrens-of-frame{
+  .childrens-of-frame {
     display:inline-flex; 
     flex-direction: row;
     justify-content:center;
+    align-items: center;
     flex-wrap: nowrap;
-    overflow-x: auto;
-    margin-right: 20px;
-    margin-top: -35px;
+    margin: 20px 20px 40px 20px;
+
   }
   
   .avatar-presentation-photographer-view {
@@ -40,9 +40,8 @@
     justify-content: center;
     align-items: center;
     position: absolute;
-    bottom: 90px;
+    bottom: 100px;
     text-align: center;
-    margin-bottom: 10px;
   }
   
   .info-style-photographer-view {
@@ -50,12 +49,11 @@
     flex-direction:column;
     justify-content: center;
     align-items: center;
-    font-size: x-small;
-    margin-top: 1em;
+    font-size:.7em;
     border-right:2px rgb(177, 171, 171) solid;
     border-left:2px rgb(177, 171, 171) solid;
     padding: 5px;
-    border-radius:8px 8px 8px 8px;
+    border-radius: 8px 8px 8px 8px;
   }
   
   .frame-bottom-container-photographer-view {
@@ -93,5 +91,54 @@
     background-color: lightgray;
     opacity: .9;
   }
+
+  @media only screen and (max-width: 1200px) { 
+
+    img[alt="bride avatar"] {
+     width: 10.5vw
+   }
+    img[alt="Girl avatar"] {
+     width: 4vw
+   }
+    img[alt="Boy avatar"] {
+     width: 4vw
+   }
+    .groupOfImages {
+      width: 8vw;
+      margin:0;
+   } 
+
+
+  }
+    
+    
+
+  @media only screen and (max-width: 900px) {
+
+    .groupOfImages {
+      width: 5vw;
+      margin-bottom:20px;
+      writing-mode: vertical-lr
+   }
+
+   img[alt="bride avatar"] {
+    width: 6.5vw
+  }
+
+   .info-style-photographer-view {
+    writing-mode: vertical-lr
+  }
+
+  }
+   
+  @media only screen and (max-width: 600px) {
+    .childrens-of-frame{
+      margin: 18px 0px 40px 15px
+    }
+
+    .info-style-photographer-view {
+      border-left: 0; 
+      border-radius: 0;
+  }
   
-  
+  }

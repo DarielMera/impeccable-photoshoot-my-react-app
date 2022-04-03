@@ -24,7 +24,6 @@ function Frame() {
         target.style.display = 'none'
     }, 0)
 
-
 }
 	return (
 		<div className="frame-container">
@@ -36,7 +35,6 @@ function Frame() {
 			>
 			</div>
 			<div className="frame-bottom-container">
-				{/* <h4 className="frame-counter">Frame: 01</h4> */}
 				<SmileButton />
 			</div>
 		</div>

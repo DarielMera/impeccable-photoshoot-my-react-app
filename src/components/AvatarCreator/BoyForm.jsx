@@ -5,7 +5,7 @@ import './formavatarstyle.css'
 
 function BoyForm() {
   const [inputs, setInputs] = useState({
-    avatarType: "boy",
+    kind: "boy",
     name: "",
     relationship: "",
     role: ""

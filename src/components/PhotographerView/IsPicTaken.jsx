@@ -1,13 +1,20 @@
-import { useReducer } from "react"
+import { useState, useReducer, useEffect } from "react"
 
 export default function IsPicTaken() {
-	let done
+const [labelColor, setLabelColor] = useState('')
+
+	
 	const [checked, toggle] = useReducer(checked => !checked, false)
-	checked && (done = "green")
+	//  checked && setLabelColor('green')
+
+	useEffect(()=>{
+		checked ? setLabelColor('green') : setLabelColor('')
+	}, [checked])
+
+
 	return (
 		<>
-			<label style={{ color: done }}>
-				{" "}
+			<label style={{ color: labelColor }}>
 				Done
 				<input
 				id="picture-taken-checkbox" 

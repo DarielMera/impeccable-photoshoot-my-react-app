@@ -5,7 +5,7 @@ import groomAvatar from "../AvatarCreator/images/groom.png"
 function SelectedImage({ kind }) {
 	const [image, setImage] = useState("")
 
-	useEffect(() => setImage(() => (kind === "Bride" ? brideAvatar : groomAvatar)), [kind])
+	useEffect(() => setImage(() => (kind === "bride" ? brideAvatar : groomAvatar)), [kind])
 	return <img src={image} alt={`${kind}`} />
 }
 
@@ -36,8 +36,8 @@ function SideBarLeft({ data }) {
 	}
 
 	const avatars = data.map(
-		avatar =>
-			(avatar.kind === "Bride" || avatar.kind === "Groom") && (
+		(avatar) =>( 
+			(avatar.kind === "bride" || avatar.kind === "groom") && (
 				<div
 					id={avatar._id}
 					className="avatar-presentation"
@@ -52,7 +52,9 @@ function SideBarLeft({ data }) {
 					</div>
 				</div>
 			)
+		)	
 	)
+	
 	return (
 		<>
 			<div className="sidebarLeft">

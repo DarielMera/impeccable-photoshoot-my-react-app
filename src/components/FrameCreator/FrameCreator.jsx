@@ -1,14 +1,21 @@
-// import useFetch from "../customHooks/useFetch"
+import { useState, useEffect } from "react"
 import Title from "../customHooks/useTitle.jsx"
 import Frame from "./Frame"
-import "./framecreator.css"
 import SideBarLeft from "./SideBarLeft"
 import SideBarRight from "./SideBarRight"
-import data from './data.json'
+import "./framecreator.css"
 
 export default function FrameCreator() {
-	// const data = useFetch("https://feipshoot.uk.r.appspot.com/avatars")
+	
 
+const [data, setData] = useState([])
+
+useEffect(()=>{
+	fetch("https://feipshoot.uk.r.appspot.com/avatars")
+	.then((res)=> res.json())
+	.then((data)=> setData(data))
+
+},[])
 	return (
 		<>
 			<Title

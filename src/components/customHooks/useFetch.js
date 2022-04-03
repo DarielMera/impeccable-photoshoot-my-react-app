@@ -9,14 +9,14 @@ export default function useFetch(uri){
     useEffect(()=>{
         if(!uri) return
         fetch(uri)
-        .then((data)=> data.json())
-        .then(setData)
+        .then((res)=> res.json())
+        .then((data)=> setData(data))
         .then(()=>setLoading(false))
         .catch(setError)
     }, [uri])
 
     if (loading) return <h1>loading...</h1>
     if (error) return <pre>{JSON.stringify(error, null, 2)}</pre>
-    if (data) return data
+    if (data) return [data]
 
 }

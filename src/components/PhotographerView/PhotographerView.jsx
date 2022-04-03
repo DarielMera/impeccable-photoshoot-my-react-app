@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react"
+import { useState, useEffect, useRef } from "react"
 import useFetch from '../customHooks/useFetch'
 
 import avatarData from './data.json'
@@ -20,22 +20,22 @@ import './photographerview.css'
 function changeImage(kind) {
 	let image
 	switch (kind) {
-		case "Bride":
+		case "bride":
 			image = brideAvatar
 			break
-		case "Groom":
+		case "groom":
 			image = groomAvatar
 			break
-		case "Female":
+		case "female":
 			image = femaleAvatar
 			break
-		case "Male":
+		case "male":
 			image = maleAvatar
 			break
-		case "Girl":
+		case "girl":
 			image = girlAvatar
 			break
-		case "Boy":
+		case "boy":
 			image = boyAvatar
 			break
 		default:
@@ -48,7 +48,7 @@ function SelectedImage({ kind }) {
 	const [image, setImage] = useState("")
 
 	useEffect(() => setImage(changeImage(kind)), [kind])
-	return <img src={image} alt={`${kind} avatar`} />
+	return <img className="groupOfImages" src={image} alt={`${kind} avatar`} />
 }
 
    
@@ -60,12 +60,11 @@ export default function PhotographerView(props) {
 		function getEachElementInsideFrameId(avatar, i){
 			return( 	
 				<> 
-				   <div  className='childrens-of-frame' > 			
+				   <div className='childrens-of-frame' > 			
 				<SelectedImage kind={avatar.kind} /> 
-					<div  key={i} className="avatar-presentation-photographer-view">
+					<div  key={i} style={{margin: '0 4rem 0 4rem'}} className="avatar-presentation-photographer-view">
 					
 						<div key={avatar._id} className="info-style-photographer-view ">
-							<span>{avatar.kind}</span> 
 							<span>{avatar.name} </span>
 							<span>{avatar.relationship}</span>
 							<span>{avatar.role}</span>
@@ -80,15 +79,13 @@ export default function PhotographerView(props) {
 					function iterateforEachDocumentInDataFrame(item, index, array) {	
 												
 						let avatarsInFrame = item.frameid.map(getEachElementInsideFrameId)
-						console.log(avatarsInFrame);
 						return (
 							<> 
 						<PhotographerFrame key={array._id} frameNumber={index + 1}> {avatarsInFrame} </PhotographerFrame>
-						<IsPicTaken />
+						<IsPicTaken/>
 						</>
 
 						)
-						
 						
 					}	
 				

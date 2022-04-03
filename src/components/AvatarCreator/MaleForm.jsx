@@ -4,7 +4,7 @@ import malePic from './images/male.png'
 
 function MaleForm() {
   const [inputs, setInputs] = useState({
-    avatarType: "male",
+    kind: "male",
     name: "",
     relationship: "",
     role: ""

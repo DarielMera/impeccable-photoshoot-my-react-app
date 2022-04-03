@@ -4,7 +4,7 @@ import bridePic from './images/bride.png'
 
 function BrideForm() {
   const [inputs, setInputs] = useState({
-    avatarType: "bride",
+    kind: "bride",
     name: "",
   });
 

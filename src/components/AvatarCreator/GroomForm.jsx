@@ -4,7 +4,7 @@ import groomPic from './images/groom.png'
 
 function GroomForm() {
   const [inputs, setInputs] = useState({
-    avatarType: "groom",
+    kind: "groom",
     name: ""
   });
 
