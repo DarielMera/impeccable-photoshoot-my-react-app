@@ -54,7 +54,7 @@ function SideBarLeft({ data }) {
 			)
 		)	
 	)
-	
+
 	return (
 		<>
 			<div className="sidebarLeft">

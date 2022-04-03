@@ -23,6 +23,7 @@ ReactDOM.render(
   <BrowserRouter>
    {/* {true ? <Home /> : <App />} */}
    <App />
+   {/* <Home /> */}
 </BrowserRouter>,
   document.getElementById('root')
 );

@@ -1,8 +1,4 @@
-import { useState, useEffect, useRef } from "react"
-import useFetch from '../customHooks/useFetch'
-
-import avatarData from './data.json'
-import frameData from './dataframe.json'
+import { useState, useEffect } from "react"
 
 import IsPicTaken from "./IsPicTaken"
 import Title from "../customHooks/useTitle.jsx"
@@ -54,8 +50,17 @@ function SelectedImage({ kind }) {
    
 
 export default function PhotographerView(props) {
-		//  frameData = useFetch('https://feipshoot.uk.r.appspot.com/frames')
-		
+	const [frameData, setFrameData] = useState([])
+
+	useEffect(()=>{
+		fetch("https://feipshoot.uk.r.appspot.com/frames")
+		.then((res)=> res.json())
+		.then((data)=> setFrameData(data))
+		// .then((data)=> console.log(data))
+	
+	},[])
+
+		console.log(frameData);	
 		// .map( callback function)
 		function getEachElementInsideFrameId(avatar, i){
 			return( 	
@@ -78,7 +83,7 @@ export default function PhotographerView(props) {
 		
 					function iterateforEachDocumentInDataFrame(item, index, array) {	
 												
-						let avatarsInFrame = item.frameid.map(getEachElementInsideFrameId)
+						let avatarsInFrame = item.frame.map(getEachElementInsideFrameId)
 						return (
 							<> 
 						<PhotographerFrame key={array._id} frameNumber={index + 1}> {avatarsInFrame} </PhotographerFrame>

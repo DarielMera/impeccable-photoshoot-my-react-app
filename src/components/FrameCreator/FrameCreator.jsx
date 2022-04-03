@@ -7,7 +7,6 @@ import "./framecreator.css"
 
 export default function FrameCreator() {
 	
-
 const [data, setData] = useState([])
 
 useEffect(()=>{

@@ -35,7 +35,6 @@ function SelectedImage({ kind }) {
 }
 
 function SideBarRight({ data }) {
-
 	const dragStart = e => {
 		const target = e.target
 
@@ -59,7 +58,7 @@ function SideBarRight({ data }) {
 		e.target.appendChild(avatar)
 	}
 
-	const avatars = data.map(
+	const avatars = data && data.map(
 		(avatar, i) => (   
 			!(avatar.kind === "bride" || avatar.kind === "groom") && (
 				<div

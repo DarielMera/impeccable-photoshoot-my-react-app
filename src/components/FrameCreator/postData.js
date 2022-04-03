@@ -8,7 +8,7 @@ console.log(dataToPost)
         'Content-Type': 'application/json'
       },
       body: JSON.stringify({ 
-        frameid: dataToPost
+        frame: dataToPost
         
       }),
     };

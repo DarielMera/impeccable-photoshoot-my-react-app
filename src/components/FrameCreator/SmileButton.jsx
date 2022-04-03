@@ -13,7 +13,7 @@ const frameComposition = () => {
 			avatar.kind = framers.childNodes[i].childNodes[1].childNodes[0].innerHTML
 			avatar.name = framers.childNodes[i].childNodes[1].childNodes[1].innerHTML
 		} else {
-			avatar.Kind = framers.childNodes[i].childNodes[0].alt
+			avatar.kind = framers.childNodes[i].childNodes[0].alt
 			avatar.name = framers.childNodes[i].childNodes[1].childNodes[0].innerHTML
 			avatar.relationship = framers.childNodes[i].childNodes[1].childNodes[1].innerHTML
 			avatar.role = framers.childNodes[i].childNodes[1].childNodes[2].innerHTML
@@ -23,8 +23,6 @@ const frameComposition = () => {
 	
 	// postData happens here -- pass in frame as the array of objecg to be post it to db
 	
-	console.log(frame)
-	localStorage.setItem("frame", JSON.stringify(frame))
 }
 
 function flashing() {
@@ -63,8 +61,8 @@ function refreshAll() {
 }
 
 function Shutter() {
-	//   postData(frameComposition())
 	frameComposition()
+    postData(frame)
 	 flashing()
 	 refreshAll()
 }
