@@ -1,9 +1,10 @@
 import { useState,useRef } from "react";
 import postData from "./postData";
 import groomPic from './images/groom.png'
+import useConfirmation from "../customHooks/useConfirmation";
 
 function GroomForm() {
-  const [confirm, setConfirm] = useState()
+  const [confirm, confirmation] = useConfirmation()
   const [inputs, setInputs] = useState({
     kind: "groom",
     name: ""
@@ -29,15 +30,6 @@ function GroomForm() {
     clearForm()
     confirmation()
   }
-
-  function confirmation(){ 
-		setConfirm("Confirmed !")
-		setTimeout(() => {
-			setConfirm("")
-		}, 1000);
-	}
-
-
 
   return (
     <form className="form center-elements" onSubmit={handleSubmit}>

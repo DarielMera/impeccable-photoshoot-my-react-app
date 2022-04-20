@@ -3,8 +3,11 @@ import postData from "./postData";
 import boyPic from './images/boy.svg'
 import './formavatarstyle.css'
 
+import useConfirmation from "../customHooks/useConfirmation";
+
+
 function BoyForm() {
-  const [confirm, setConfirm] = useState()
+  const [confirm, confirmation] = useConfirmation()
   const [inputs, setInputs] = useState({
     kind: "boy",
     name: "",
@@ -30,12 +33,6 @@ function BoyForm() {
   roleRef.current.value = ''
   }
 
-  function confirmation(){ 
-		setConfirm("Confirmed !")
-		setTimeout(() => {
-			setConfirm("")
-		}, 1000);
-	}
 
 
   const handleSubmit = (event) => {

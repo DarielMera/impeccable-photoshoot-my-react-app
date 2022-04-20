@@ -1,9 +1,10 @@
 import { useState, useRef } from "react";
 import postData from "./postData";
 import femalePic from './images/female.svg'
+import useConfirmation from "../customHooks/useConfirmation";
 
 function FemaleForm() {
-  const [confirm, setConfirm] = useState()
+  const [confirm, confirmation] = useConfirmation()
   const [inputs, setInputs] = useState({
     kind: "female",
     name: "",
@@ -28,13 +29,6 @@ function FemaleForm() {
       relationshipRef.current.value = ''
       roleRef.current.value = ''
   }
-
-  function confirmation(){ 
-		setConfirm("Confirmed !")
-		setTimeout(() => {
-			setConfirm("")
-		}, 1000);
-	}
 
 
   const handleSubmit = (event) => {

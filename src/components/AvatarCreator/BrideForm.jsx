@@ -2,8 +2,10 @@ import { useState, useRef } from "react";
 import postData from "./postData";
 import bridePic from './images/bride.png'
 
+import useConfirmation from "../customHooks/useConfirmation";
+
 function BrideForm() {
-  const [confirm, setConfirm] = useState()
+  const [confirm, confirmation] = useConfirmation()
   const [inputs, setInputs] = useState({
     kind: "bride",
     name: "",
@@ -23,22 +25,12 @@ function BrideForm() {
       nameRef.current.value = ''
   }
 
-  function confirmation(){ 
-		setConfirm("Confirmed !")
-		setTimeout(() => {
-			setConfirm("")
-		}, 1000);
-	}
-
-
   const handleSubmit = (event) => {
     event.preventDefault();
     postData(inputs)
     clearForm()
     confirmation()
-
   }
-
 
   return (
     <> 

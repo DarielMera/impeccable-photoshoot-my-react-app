@@ -1,9 +1,10 @@
 import { useState, useRef } from "react";
 import postData from "./postData";
 import malePic from './images/male.png'
+import useConfirmation from "../customHooks/useConfirmation";
 
 function MaleForm() {
-  const [confirm, setConfirm] = useState()
+  const [confirm, confirmation] = useConfirmation()
   const [inputs, setInputs] = useState({
     kind: "male",
     name: "",
@@ -27,13 +28,6 @@ function MaleForm() {
       [name]: value
     }))
   }
-
-  function confirmation(){ 
-		setConfirm("Confirmed !")
-		setTimeout(() => {
-			setConfirm("")
-		}, 1000);
-	}
 
   const handleSubmit = (event) => {
     event.preventDefault();
