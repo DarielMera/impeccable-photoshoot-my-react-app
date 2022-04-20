@@ -3,6 +3,7 @@ import postData from "./postData";
 import girlPic from './images/girl.svg'
 
 function GirlForm() {
+  const [confirm, setConfirm] = useState()
   const [inputs, setInputs] = useState({
     kind: "girl",
     name: "",
@@ -18,20 +19,29 @@ function GirlForm() {
     }))
   }
 
+  const nameRef = useRef();
+  const relationshipRef = useRef();
+  const roleRef = useRef();
+
+  function clearForm(){
+      nameRef.current.value = ''
+      relationshipRef.current.value = ''
+      roleRef.current.value = ''
+  }
+
+  function confirmation(){ 
+		setConfirm("Confirmed !")
+		setTimeout(() => {
+			setConfirm("")
+		}, 1000);
+	}
+
   const handleSubmit = (event) => {
     event.preventDefault();
     postData(inputs)
+    clearForm()
+    confirmation()
   }
-
-  const inputElement = useRef();
-  const inputElement2 = useRef();
-  const inputElement3 = useRef();
-  function clearForm(){
-      inputElement.current.value = ''
-      inputElement2.current.value = ''
-      inputElement3.current.value = ''
-  }
-
 
   return (
     <form className="form center-elements" onSubmit={handleSubmit}>
@@ -40,7 +50,8 @@ function GirlForm() {
       style={{width:"65px",
       height: "110px"}}  
       alt="girl avatar"/>
-      <section className="center-elements-column"> 
+      <section className="center-elements-column">
+      <h3 style={{color:'gray', marginBottom: '10px', opacity:'.8'}}>{confirm}</h3>
          <input 
            className="text-input"
            type="text" 
@@ -48,18 +59,20 @@ function GirlForm() {
            placeholder="Participant Name"
            value={inputs.value} 
            onChange={handleChange}
-           ref={inputElement}
+           ref={nameRef}
+           required
            />
         <select 
         className="text-input"
         value={inputs.relationship}
         onChange={handleChange}
         name="relationship"
-        ref={inputElement2}
+        ref={relationshipRef}
 
         >
         <option value=""> select relationship </option>
-        <option value="Daughter"> Daughter </option>
+        <option value="GroomDaughter"> Groom-daughter </option>
+        <option value="BriddeDaughter"> Bride-daughter </option>
         <option value="Stepdaughter "> Stepdaughter </option>
         <option value="Granddaughter"> Granddaughter </option>
         <option value="Goddaughter"> Goddaughter </option>
@@ -75,14 +88,14 @@ function GirlForm() {
         value={inputs.role}
         onChange={handleChange}
         name="role"
-        ref={inputElement3}
+        ref={roleRef}
 
         >
         <option value="">select role</option>
         <option value="Flower-Girl">Flower-Girl</option>
       </select>
 
-      <button onClick={clearForm} className="button">Create Avatar</button>
+      <button className="button">Create Avatar</button>
       </section>
     </form>
   )

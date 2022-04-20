@@ -3,12 +3,22 @@ import postData from "./postData";
 import malePic from './images/male.png'
 
 function MaleForm() {
+  const [confirm, setConfirm] = useState()
   const [inputs, setInputs] = useState({
     kind: "male",
     name: "",
     relationship: "",
     role: ""
   });
+
+  const nameRef = useRef();
+  const relationshipRef = useRef();
+  const roleRef = useRef();
+  function clearForm(){
+      nameRef.current.value = ''
+      relationshipRef.current.value = ''
+      roleRef.current.value = ''
+  }
 
   const handleChange = (event) => {
     const {name, value} = event.target
@@ -18,19 +28,20 @@ function MaleForm() {
     }))
   }
 
+  function confirmation(){ 
+		setConfirm("Confirmed !")
+		setTimeout(() => {
+			setConfirm("")
+		}, 1000);
+	}
+
   const handleSubmit = (event) => {
     event.preventDefault();
     postData(inputs)
+    clearForm()
+    confirmation()
   }
 
-  const inputElement = useRef();
-  const inputElement2 = useRef();
-  const inputElement3 = useRef();
-  function clearForm(){
-      inputElement.current.value = ''
-      inputElement2.current.value = ''
-      inputElement3.current.value = ''
-  }
 
   return (
     <form className="form center-elements" onSubmit={handleSubmit}>
@@ -39,7 +50,8 @@ function MaleForm() {
       style={{width:"115px",
       height: "270px"}}  
       alt="male avatar"/>
-      <section className="center-elements-column"> 
+      <section className="center-elements-column">
+      <h3 style={{color:'gray', marginBottom: '10px', opacity:'.8'}}>{confirm}</h3>
          <input 
            className="text-input"
            type="text" 
@@ -47,7 +59,8 @@ function MaleForm() {
            placeholder="Participant Name"
            value={inputs.value} 
            onChange={handleChange}
-           ref={inputElement}
+           ref={nameRef}
+           required
            />
 
         <select 
@@ -55,8 +68,7 @@ function MaleForm() {
         value={inputs.relationship}
         onChange={handleChange}
         name="relationship"
-        ref={inputElement2}
-
+        ref={relationshipRef}
         >
         <option value=""> select relationship</option>
         <option value="G-GrandFather"> G-GrandFather </option>
@@ -80,15 +92,15 @@ function MaleForm() {
         value={inputs.role}
         onChange={handleChange}
         name="role"
-        ref={inputElement3}
-
+        ref={roleRef}
         >
+
         <option value="">select role</option>
         <option value="Groomsman">Groomsman</option>
         <option value="Best-man">Best Man</option>
       </select>
 
-      <button onClick={clearForm} className="button">Create Avatar</button>
+      <button className="button">Create Avatar</button>
       </section>
     </form>
   )

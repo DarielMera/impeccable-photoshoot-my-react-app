@@ -3,6 +3,7 @@ import postData from "./postData";
 import bridePic from './images/bride.png'
 
 function BrideForm() {
+  const [confirm, setConfirm] = useState()
   const [inputs, setInputs] = useState({
     kind: "bride",
     name: "",
@@ -16,16 +17,28 @@ function BrideForm() {
     }))
   }
 
+  const nameRef = useRef();
+  
+  function clearForm(){
+      nameRef.current.value = ''
+  }
+
+  function confirmation(){ 
+		setConfirm("Confirmed !")
+		setTimeout(() => {
+			setConfirm("")
+		}, 1000);
+	}
+
+
   const handleSubmit = (event) => {
     event.preventDefault();
     postData(inputs)
+    clearForm()
+    confirmation()
+
   }
 
-  const inputElement = useRef();
-  
-  function clearForm(){
-      inputElement.current.value = ''
-  }
 
   return (
     <> 
@@ -35,7 +48,8 @@ function BrideForm() {
       style={{width:"160px",
       height: "280px"}}  
       alt="bride avatar"/>
-      <section className="center-elements-column"> 
+      <section className="center-elements-column">
+      <h3 style={{color:'gray', marginBottom: '10px', opacity:'.8'}}>{confirm}</h3>
          <input 
            className="text-input"
            type="text" 
@@ -43,9 +57,10 @@ function BrideForm() {
            placeholder="Bride's Name"
            value={inputs.value} 
            onChange={handleChange}
-           ref={inputElement}
+           ref={nameRef}
+           required
          />         
-         <button onClick={clearForm} className="button">Bride To Be</button>
+         <button className="button">Bride To Be</button>
       </section>
     </form>
     </>

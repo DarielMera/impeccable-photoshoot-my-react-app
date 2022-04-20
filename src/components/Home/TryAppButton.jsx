@@ -1,10 +1,13 @@
+import {Navigate} from 'react-router-dom'
 
 function TryAppButton() {
 
     return ( 
         <h1 
         className="tryitnow"
-        >Try it Now
+        onClick={<Navigate to='/avatarCreator' />}
+        >
+            Try it Now
         </h1>
 
         

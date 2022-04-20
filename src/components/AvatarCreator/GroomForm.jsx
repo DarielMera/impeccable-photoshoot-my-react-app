@@ -3,6 +3,7 @@ import postData from "./postData";
 import groomPic from './images/groom.png'
 
 function GroomForm() {
+  const [confirm, setConfirm] = useState()
   const [inputs, setInputs] = useState({
     kind: "groom",
     name: ""
@@ -16,15 +17,26 @@ function GroomForm() {
     }))
   }
 
+  const nameRef = useRef();
+  
+  function clearForm(){
+      nameRef.current.value = ''
+  }
+
   const handleSubmit = (event) => {
     event.preventDefault();
     postData(inputs)
+    clearForm()
+    confirmation()
   }
 
-  const inputElement = useRef();
-  function clearForm(){
-      inputElement.current.value = ''
-  }
+  function confirmation(){ 
+		setConfirm("Confirmed !")
+		setTimeout(() => {
+			setConfirm("")
+		}, 1000);
+	}
+
 
 
   return (
@@ -35,6 +47,7 @@ function GroomForm() {
       height: "290px"}}  
       alt="groom avatar"/>
       <section className="center-elements-column"> 
+      <h3 style={{color:'gray', marginBottom: '10px', opacity:'.8'}}>{confirm}</h3>
          <input 
            className="text-input"
            type="text" 
@@ -42,10 +55,11 @@ function GroomForm() {
            placeholder="Groom's Name"
            value={inputs.value} 
            onChange={handleChange}
-           ref={inputElement}
+           ref={nameRef}
+           required
          />
          
-         <button onClick={clearForm} className="button">Groom To Be</button>
+         <button className="button">Groom To Be</button>
       </section>
     </form>
   )

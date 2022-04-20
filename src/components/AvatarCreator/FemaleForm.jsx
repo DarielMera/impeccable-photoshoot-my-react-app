@@ -3,6 +3,7 @@ import postData from "./postData";
 import femalePic from './images/female.svg'
 
 function FemaleForm() {
+  const [confirm, setConfirm] = useState()
   const [inputs, setInputs] = useState({
     kind: "female",
     name: "",
@@ -18,20 +19,30 @@ function FemaleForm() {
     }))
   }
 
+  const nameRef = useRef();
+  const relationshipRef = useRef();
+  const roleRef = useRef();
+
+  function clearForm(){
+      nameRef.current.value = ''
+      relationshipRef.current.value = ''
+      roleRef.current.value = ''
+  }
+
+  function confirmation(){ 
+		setConfirm("Confirmed !")
+		setTimeout(() => {
+			setConfirm("")
+		}, 1000);
+	}
+
+
   const handleSubmit = (event) => {
     event.preventDefault();
     postData(inputs)
+    clearForm()
+    confirmation()
   }
-
-  const inputElement = useRef();
-  const inputElement2 = useRef();
-  const inputElement3 = useRef();
-  function clearForm(){
-      inputElement.current.value = ''
-      inputElement2.current.value = ''
-      inputElement3.current.value = ''
-  }
-
 
   return (
     <form className="form center-elements" onSubmit={handleSubmit}>
@@ -41,6 +52,7 @@ function FemaleForm() {
       height: "260px"}}  
       alt="female avatar"/>
       <section className="center-elements-column"> 
+      <h3 style={{color:'gray', marginBottom: '10px', opacity:'.8'}}>{confirm}</h3>
          <input 
            className="text-input"
            type="text" 
@@ -48,16 +60,17 @@ function FemaleForm() {
            placeholder="Participant Name"
            value={inputs.value} 
            onChange={handleChange}
-           ref={inputElement}
+           ref={nameRef}
+           required
            />
         <select 
         className="text-input"
         value={inputs.relationship}
         onChange={handleChange}
         name="relationship"
-        ref={inputElement2}
-
+        ref={relationshipRef}
         >
+
         <option value=""> select relationship </option>
         <option value="G-GrandMother"> G.GrandMother </option>
         <option value="GrandMother"> GrandMother </option>
@@ -80,15 +93,16 @@ function FemaleForm() {
         value={inputs.role}
         onChange={handleChange}
         name="role"
-        ref={inputElement3}
-
+        ref={roleRef}
         >
+
         <option value="">select role</option>
         <option value="Maid-of-Honor">Maid of Honor</option>
         <option value="Matron-of-Honor">Matron of Honor</option>
+        <option value="bridesmaid">Bridesmaid</option>
       </select>
 
-      <button onClick={clearForm} className="button">Create Avatar</button>
+      <button className="button">Create Avatar</button>
       </section>
     </form>
   )

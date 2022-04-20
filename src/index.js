@@ -1,6 +1,6 @@
 import React, { useState, createContext } from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter} from 'react-router-dom';
+import { BrowserRouter, Routes, Route} from 'react-router-dom';
 import Home from './components/Home/Home';
 import App from './App';
 import './index.css';
@@ -22,8 +22,8 @@ import './index.css';
 ReactDOM.render(
   <BrowserRouter>
    {/* {true ? <Home /> : <App />} */}
-   <App />
-   {/* <Home /> */}
+   {/* <App /> */}
+   <Home />
 </BrowserRouter>,
   document.getElementById('root')
 );

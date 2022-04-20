@@ -1,3 +1,5 @@
+import {useState} from 'react'
+
 import BrideForm from "./BrideForm"
 import FemaleForm from "./FemaleForm"
 import GroomForm from "./GroomForm"
@@ -7,7 +9,10 @@ import BoyForm from "./BoyForm"
 import Title from '../customHooks/useTitle.jsx';
 import "./formavatarcreatorstyle.css"
 
-export default function AvatarCreator() {
+import React from 'react'
+
+export default function AvatarCreator() {	
+	
 	return (
 		<>
 			<Title 
@@ -16,12 +21,12 @@ export default function AvatarCreator() {
 			/>
 			
 			<div id="formcontainer">
-				<div id="brideForm" ><BrideForm /></div>       
-				<div id="groomForm" ><GroomForm /></div>       
+				<div id="brideForm" ><BrideForm/></div>       
+				<div id="groomForm" ><GroomForm/></div>       
 				<div id="femaleForm" className="form-styles"><FemaleForm/></div>       
-				<div id="maleForm"   className="form-styles"><MaleForm  /></div>       
-				<div id="girlForm"   className="form-styles" style={{marginLeft:"5px"}}> <GirlForm /> </div>       
-				<div id="boyForm"    className="form-styles" style={{marginLeft:"5px"}}> <BoyForm  /> </div>       
+				<div id="maleForm"   className="form-styles"><MaleForm /></div>       
+				<div id="girlForm"   className="form-styles" style={{marginLeft:"5px"}}> <GirlForm/> </div>       
+				<div id="boyForm"    className="form-styles" style={{marginLeft:"5px"}}> <BoyForm /> </div>
 			</div>
 		</>
 	)

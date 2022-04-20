@@ -4,6 +4,7 @@ import boyPic from './images/boy.svg'
 import './formavatarstyle.css'
 
 function BoyForm() {
+  const [confirm, setConfirm] = useState()
   const [inputs, setInputs] = useState({
     kind: "boy",
     name: "",
@@ -19,20 +20,30 @@ function BoyForm() {
     }))
   }
 
+  const nameRef = useRef();
+  const relationshipRef = useRef();
+  const roleRef = useRef();
+
+  function clearForm(){
+  nameRef.current.value = ''
+  relationshipRef.current.value = ''
+  roleRef.current.value = ''
+  }
+
+  function confirmation(){ 
+		setConfirm("Confirmed !")
+		setTimeout(() => {
+			setConfirm("")
+		}, 1000);
+	}
+
+
   const handleSubmit = (event) => {
     event.preventDefault();
     postData(inputs)
+    clearForm()
+    confirmation()
   }
-
-  const inputElement = useRef();
-  const inputElement2 = useRef();
-  const inputElement3 = useRef();
-  function clearForm(){
-      inputElement.current.value = ''
-      inputElement2.current.value = ''
-      inputElement3.current.value = ''
-  }
-
 
   return (
     <form className="form center-elements" onSubmit={handleSubmit}>
@@ -42,6 +53,7 @@ function BoyForm() {
       height: "110px"}}  
       alt="boy avatar"/>
       <section className="center-elements-column"> 
+      <h3 style={{color:'gray', marginBottom: '10px', opacity:'.8'}}>{confirm}</h3>
          <input 
            className="text-input"
            type="text" 
@@ -49,22 +61,25 @@ function BoyForm() {
            placeholder="Participant Name"
            value={inputs.value} 
            onChange={handleChange}
-           ref={inputElement}
+           ref={nameRef}
+           required
            />
         <select 
         className="text-input"
         value={inputs.relationship}
         onChange={handleChange}
         name="relationship"
+        ref={relationshipRef}
         >
         <option value=""> select relationship </option>
-        <option value="Son"> Son </option>
+        <option value="GroomSon"> Groom-Son </option>
+        <option value="BrideSon"> Bride-son </option>
         <option value="StepSon"> StepSon </option>
         <option value="GrandSon"> GrandSon </option>
         <option value="Godson"> Godson </option>
         <option value="Uncle"> Uncle </option>
         <option value="StepBrother"> StepBrother </option>
-        <option value="Brother-in-Law"> Law </option>
+        <option value="Brother-in-Law"> Brodther-in-Law </option>
         <option value="Cousin"> Cousin </option>
         <option value="Guest"> Guest </option>
       </select>
@@ -74,12 +89,13 @@ function BoyForm() {
         value={inputs.role}
         onChange={handleChange}
         name="role"
+        ref={roleRef}
         >
         <option value="">select role</option>
         <option value="Ring-Bearer">Ring-Bearer</option>
       </select>
 
-      <button onClick={clearForm} className="button">Create Avatar</button>
+      <button className="button">Create Avatar</button>
       </section>
     </form>
   )
