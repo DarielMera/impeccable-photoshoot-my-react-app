@@ -90,7 +90,7 @@ function MaleForm() {
         >
 
         <option value="">select role</option>
-        <option value="Groomsman">Groomsman</option>
+        <option value="Groomsman">Groomsmen</option>
         <option value="Best-man">Best Man</option>
       </select>
 
