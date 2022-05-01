@@ -7,7 +7,7 @@ export default function Help() {
 		<>
 			<Title title="Overview & Guide" instructions={`App Purpose and How to use it`} />
       <Bounce left duration={2000}>
-			<article className="suggestions-List-container ">
+			<article className="help-container ">
 				<p>
 					SPA built with the MERN STACK, deployed with FIREBASE. It's purpose is to assist
 					photographers by easing their workflow at wedding photoshoots

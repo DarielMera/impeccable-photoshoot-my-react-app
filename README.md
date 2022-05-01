@@ -77,8 +77,4 @@ Let's Connect <img src="https://img.icons8.com/external-flatart-icons-outline-fl
 [<img src="https://img.icons8.com/fluency/48/000000/youtube-play.png" height="50px"/>](https://youtu.be/3GwBpXjyt1c)
 [<img src="https://bocacode.com/assets/images/bc-logos/bc-icon-adjust.png" height="39px"/>](https://bocacode.com/candidates/software-engineer/dariel-mera)
 [<img src="https://img.icons8.com/ios-filled/50/000000/linkedin-circled--v1.png" height="45px"/>](https://www.linkedin.com/in/dariel-mera-b6454057/)
-<<<<<<< HEAD
 [<img src="https://techhubsouthflorida.org/wp-content/uploads/2021/09/Tech-Hub-Vertical-WHITE-Logo.png" height="43px"/>](https://techhubsouthflorida.org/hack-for-inclusion-event/?utm_source=TECH+HUB+SOUTH+FLORIDA&utm_campaign=1a713feb7d-Newsletter_6_NEW9_4_2015_COPY_01&utm_medium=email&utm_term=0_b713bd7972-1a713feb7d-158993226&mc_cid=1a713feb7d&mc_eid=f81c203332)
-=======
-[<img src="https://techhubsouthflorida.org/wp-content/uploads/2021/09/Tech-Hub-Vertical-WHITE-Logo.png" height="43px"/>](https://techhubsouthflorida.org/hack-for-inclusion-event/?utm_source=TECH+HUB+SOUTH+FLORIDA&utm_campaign=1a713feb7d-Newsletter_6_NEW9_4_2015_COPY_01&utm_medium=email&utm_term=0_b713bd7972-1a713feb7d-158993226&mc_cid=1a713feb7d&mc_eid=f81c203332)
->>>>>>> 1a24240e8def815005061715b23f313a0fc84963
