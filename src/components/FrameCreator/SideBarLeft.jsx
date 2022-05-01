@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react"
 import brideAvatar from "../AvatarCreator/images/bride.png"
 import groomAvatar from "../AvatarCreator/images/groom.png"
+import Zoom from 'react-reveal/Zoom'
+
 
 function SelectedImage({ kind }) {
 	const [image, setImage] = useState("")
@@ -57,6 +59,7 @@ function SideBarLeft({ data }) {
 
 	return (
 		<>
+				<Zoom>
 			<div className="sidebarLeft">
 			<div className="bars-style"
 				draggable 
@@ -66,6 +69,7 @@ function SideBarLeft({ data }) {
 					{avatars}
 				</div>
 			</div>
+					</Zoom>
 		</>
 	)
 }

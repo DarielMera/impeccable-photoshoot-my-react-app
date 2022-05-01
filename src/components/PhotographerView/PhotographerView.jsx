@@ -11,6 +11,8 @@ import maleAvatar from "../AvatarCreator/images/male.png"
 import girlAvatar from "../AvatarCreator/images/girl.svg"
 import boyAvatar from "../AvatarCreator/images/boy.svg"
 
+import Slide from 'react-reveal/Slide'
+
 import './photographerview.css'
 
 function changeImage(kind) {
@@ -99,7 +101,11 @@ export default function PhotographerView(props) {
 		return (
 			<>
 			<Title title="Photographer View" instructions="This is a preview list of the shots the photographer will take"/>
+			<Slide bottom duration={2000}> 
+			<div> 
 			{newArrayToBeDisplayed}
+			</div>
+			</Slide>
 
 		</>
 	)

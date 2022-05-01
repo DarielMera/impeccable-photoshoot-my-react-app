@@ -1,3 +1,5 @@
+import Flip from 'react-reveal/Flip'
+
 export default function useTitle({ title, instructions }) {
 	const center = {
 		textAlign: "center",
@@ -12,9 +14,11 @@ export default function useTitle({ title, instructions }) {
 	}
 
 	return (
+		<Flip bottom> 
 		<div style={center}>
 			<h2 style={{ marginBottom: "5px" }}>{title}</h2>
 			<p>{instructions}</p>
 		</div>
+		</Flip>
 	)
 }

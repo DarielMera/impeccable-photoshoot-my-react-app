@@ -26,11 +26,12 @@ export default function ResponsiveMenu(){
           </button>
 
           <nav className="dropdown-content">
-            <Link className="linkColor" to="home"> Home </Link>
+            <Link className="linkColor" to="/"> Home </Link>
             <Link className="linkColor" to="suggestionsList"> Shot Suggestion List </Link>
             <Link className="linkColor" to="avatarCreator"> Avatar Creator </Link>
             <Link className="linkColor" to="frameCreator"> Frame Creator </Link>
             <Link className="linkColor" to="photographerview"> Photographer View </Link>
+            <Link className="linkColor" to="help"> Help? </Link>
           </nav>
         </div>
       </>

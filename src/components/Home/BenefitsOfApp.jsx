@@ -13,10 +13,10 @@ export default function BenefitsOfApp() {
 			<div className="marketing center-elements">
 				<div className="marketing-container marketing-container-left"></div>
 				<div className="marketing-container marketing-container-right"></div>
-				<ul>
+				<ul className="ulhome">
 					{benefitsOfApp.map((blist, i)=>(
                         <> 
-                        <li key={i}>{blist}</li><br/>
+                        <li className="homeList " key={i}>{blist}</li><br/>
                         </>
                     ))}
 				</ul>

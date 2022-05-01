@@ -6,6 +6,9 @@ import maleAvatar from "../AvatarCreator/images/male.png"
 import girlAvatar from "../AvatarCreator/images/girl.svg"
 import boyAvatar from "../AvatarCreator/images/boy.svg"
 
+import Zoom from 'react-reveal/Zoom'
+
+
 function changeImage(kind) {
 	let image
 	switch (kind) {
@@ -80,6 +83,8 @@ function SideBarRight({ data }) {
 	)
 
 	return (
+		<Zoom>
+
 		<div className="sidebarRight">
 			<div className="bars-style"
 				draggable onDragStart={dragStart}
@@ -89,6 +94,8 @@ function SideBarRight({ data }) {
 			
 			</div>
 		</div>
+		</Zoom>
+
 	)
 }
 

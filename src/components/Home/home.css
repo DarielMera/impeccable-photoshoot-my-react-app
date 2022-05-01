@@ -78,7 +78,7 @@ body {
 }
 
 .marketing-container,
-ul {
+.ulhome {
     list-style: none;
 }
 
@@ -97,13 +97,13 @@ ul {
     /* background-color: rgb(170, 175, 175, .1); */
 }
 
-ul>li {
+.homeList {
     background-color: rgba(189, 182, 182, 0.1);
     padding: 45px;
     border-radius: 8px;
     box-shadow: black 2px 2px 2px 1px;
 }
-ul>li:hover {
+.homeList:hover{
     text-shadow: 3px 10px 10px #AD8A21;
     background-color: #f5efefcf;
     box-shadow: #AD8A21 2px 2px 2px 1px;
@@ -170,7 +170,6 @@ ul>li:hover {
     align-items: center;
 }
 
-
 .center-elements-column {
     display: flex;
     flex-direction: column;
@@ -196,8 +195,19 @@ ul>li:hover {
         border: 0px;
     }
 
-    ul>li:nth-child(odd) {
+     ul>li:nth-child(odd) {
         padding: 15px;
         width: 50vw;
     }
+
+
 }
+
+@media only screen and (max-width: 700px) {
+
+#logo {
+    height: 80%;
+    width: 25%;
+}
+}
+
